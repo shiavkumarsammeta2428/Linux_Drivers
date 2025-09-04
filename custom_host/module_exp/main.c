@@ -2,24 +2,24 @@
 
 #include <linux/module.h>
 
-static int __init module_init_example();
-static void __exit module_exit_example();
+static int __init example_init(void);
+static void __exit example_exit(void);
 
 
-static int __init  module_init_example(){
+static int __init example_init(){
 
-	printk("Example:_Module_init_executed\n");
+	pr_info("Example:_Module_init_executed\n");
 	return 0;
 }
 
 
-static void __exit module_exit_example(){
-	printf("Example:_Module_exit_executedn\n");
+static void __exit example_exit(){
+	pr_info("Example:_Module_exit_executedn\n");
 }
 
 
-module_init(module_init_example);
-module_exit(module_exit_example);
+module_init(example_init);
+module_exit(example_exit);
 
 
 MODULE_LICENSE("GPL");
