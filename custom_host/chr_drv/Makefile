@@ -1,4 +1,4 @@
-obj-m := main.o
+obj-m := pcd.o
 
 
 KERN_DIR = /home/shiva/Linux_Drivers/kernel_src/WSL2-Linux-Kernel

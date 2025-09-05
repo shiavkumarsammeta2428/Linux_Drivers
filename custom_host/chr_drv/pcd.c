@@ -88,7 +88,6 @@ static int __init  chr_drv_init(){
 	cdev_add(&pcd_cdev,device_number,1);
 
 	/*3. create device class under /sys/class/<pcd_class> */
-	// class_pcd = class_create(THIS_MODULE,"pcd_class");
 	class_pcd = class_create("pcd_class");
 
 	/* 4. populating sysfs with device information.
